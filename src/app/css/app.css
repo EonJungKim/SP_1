@@ -1,0 +1,32 @@
+/**
+  * @파일제목   : app.css
+  * @프로젝트명  : ST-1
+  * @소유      : (주)스패셜티
+  * @생성자    : 김언중
+  * @생성날짜   : 2023. 01. 23.
+  *
+  * == 수정사항 ==
+  * ---------------------------------------
+  * 2023. 01. 23.  김언중 최초 생성
+  *
+  */
+
+main {
+    text-align: center;
+    padding: 1em;
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #ff3e00;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 100;
+}
+
+@media (min-width: 640px) {
+    main {
+        max-width: none;
+    }
+}
