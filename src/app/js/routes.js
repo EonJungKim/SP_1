@@ -12,11 +12,14 @@
  */
 import Login from '../svelte/login/Login.svelte';
 import Restaurant from "../svelte/restaurant/Restaurant.svelte";
+import CalendarView from "../svelte/calendar/CalendarView.svelte";
 
 const routes = {
     '/': Login,
     '/login': Login,
     '/restaurant': Restaurant,
+    '/calendar': CalendarView,
+    '/calendar/view': CalendarView
 };
 
 export default routes;
