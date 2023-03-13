@@ -13,9 +13,11 @@
 import Login from '../svelte/login/Login.svelte';
 import Restaurant from "../svelte/restaurant/Restaurant.svelte";
 import CalendarView from "../svelte/calendar/CalendarView.svelte";
+import Home from "../svelte/home/Home.svelte";
 
 const routes = {
-    '/': Login,
+    '/': Home,
+    '/home': Home,
     '/login': Login,
     '/restaurant': Restaurant,
     '/calendar': CalendarView,
