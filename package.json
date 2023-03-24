@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "rollup -c --host 192.168.200.169 --port 8080",
-    "dev": "rollup -c -w --host 192.168.200.169 --port 8080",
-    "start": "sirv public --no-clear --host 192.168.200.169 --port 8080"
+    "build": "rollup -c --host 192.168.0.19 --port 8080",
+    "dev": "rollup -c -w --host 192.168.0.19 --port 8080",
+    "start": "sirv public --no-clear --host 192.168.0.19 --port 8080"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^4.0.3",

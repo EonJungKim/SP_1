@@ -11,7 +11,7 @@
  *
  */
 
-const SERVER_IP = '192.168.200.169';
+const SERVER_IP = '192.168.0.19';
 const SERVER_PORT = '8080';
 
 async function callFetch(url, method, query, body, headers) {
