@@ -25,10 +25,11 @@
                 userId : userId,
                 userPwd : userPwd
             };
-            console.log(param);
 
             const res = await Api.post('test/login.do', param);
-            console.log(res);
+            if (res.status.resultCd == 'OK') {
+                location.href = "/#/home"
+            }
         }
     }
 

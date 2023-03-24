@@ -10,16 +10,27 @@
  * 2023. 01. 24.  김언중 최초 생성
  *
  */
-import Login from '../svelte/login/Login.svelte';
-import Restaurant from "../svelte/restaurant/Restaurant.svelte";
+import login from '../svelte/login/Login.svelte';
+import rstntList from "../svelte/restaurant/List.svelte";
+import rstntReg from "../svelte/restaurant/Regist.svelte";
+import rstntMod from "../svelte/restaurant/Modify.svelte";
+import rstntView from "../svelte/restaurant/View.svelte";
 import CalendarView from "../svelte/calendar/CalendarView.svelte";
-import Home from "../svelte/home/Home.svelte";
+import home from "../svelte/home/Home.svelte";
 
 const routes = {
-    '/': Home,
-    '/home': Home,
-    '/login': Login,
-    '/restaurant': Restaurant,
+    '/': login,
+    '/home': home,
+    '/login': login,
+
+    // 음식점 관련
+    '/restaurant': rstntList,
+    '/restaurant/list': rstntList,
+    '/restaurant/reg': rstntReg,
+    '/restaurant/mod': rstntMod,
+    '/restaurant/view': rstntView,
+    
+    // 달력 관련
     '/calendar': CalendarView,
     '/calendar/view': CalendarView
 };
