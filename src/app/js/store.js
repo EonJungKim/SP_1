@@ -12,6 +12,6 @@
  */
 
 import { writable } from 'svelte/store';
-import './api';
+import './Api';
 
 // let items = await callFetch(`https://jsonplaceholder.typicode.com/posts?_page=1&limit=10`, 'get', '', null, null).then(res => console.log(res));

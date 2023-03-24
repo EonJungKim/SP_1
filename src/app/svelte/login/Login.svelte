@@ -1,37 +1,34 @@
 <script>
-    let txtId = '';
-    let txtPwd = '';
+    import Api from "../../js/Api";
+
+    let userId = '';
+    let userPwd = '';
     let idSave = false;
 
     function validate() {
-        console.log('textId : ' + txtId);
-        console.log('textPwd : ' + txtPwd);
-        console.log('idSave : ' + idSave);
-
-        if (txtId.trim() == '') {
-            alert('');
+        if (userId.trim() == '') {
+            alert('ID를 입력해주세요.');
             return false;
         }
 
-        if (txtPwd.trim() == '') {
-            alert('');
+        if (userPwd.trim() == '') {
+            alert('비밀번호를 입력해주세요.');
             return false;
         }
 
         return true;
     }
 
-    function login() {
+    async function login() {
         if (validate()) {
-            let response;
-            response = fetch(`https://jsonplaceholder.typicode.com/posts?_page=1&limit=10`).then(res => res.json());
-            const result = response.result;
-            if (result.code == '200') {
-                // TODO : 로그인 정보를 Store에 저장하는 소스코드 추가
-                location.href = '/';
-            } else {
-                alert(result.message);
-            }
+            const param = {
+                userId : userId,
+                userPwd : userPwd
+            };
+            console.log(param);
+
+            const res = await Api.post('test/login.do', param);
+            console.log(res);
         }
     }
 
@@ -43,8 +40,8 @@
 <div>
     <div>
         <div style="display: inline-block;">
-            <input type="text" id="txtId" style="display: block;" bind:value={txtId} />
-            <input type="password" id="txtPwd" style="display: block;" bind:value={txtPwd}/>
+            <input type="text" id="txtId" style="display: block;" bind:value={userId} />
+            <input type="password" id="txtPwd" style="display: block;" bind:value={userPwd}/>
         </div>
         <button style="height: 100%;" on:click={login}>로그인</button>
     </div>

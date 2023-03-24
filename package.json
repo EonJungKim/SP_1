@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@sveltech/routify": "^1.9.10",
+    "axios": "^1.3.4",
     "path": "^0.12.7",
     "sirv-cli": "^2.0.0",
     "src": "^1.1.2",

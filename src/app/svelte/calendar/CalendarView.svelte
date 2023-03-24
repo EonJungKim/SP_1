@@ -19,11 +19,11 @@
     function initMonthItems() {
         let y = year;
         let m = month;
-        let d1=new Date(y,m,randInt(7)+7);
+        let d1 = new Date(y,m,randInt(7)+7);
         items = [
             {title:"순대국밥 8,000원",className:"task--primary",date:new Date(y,m,randInt(6)),len:1},
             {title:"돈까스 10,500원",className:"task--warning",date:d1,len:1},
-            {title:"휴가",date:d1,className:"task--info",len:4,isBottom:true},
+            {title:"휴가",date:new Date(y,m,randInt(1)),className:"task--info",len:4,isBottom:true},
             {title:"라멘 11,000원",date:new Date(y,m,randInt(7)+14),className:"task--info",len:1,detailHeader:"사이드 추가",detailContent:"차슈 500원"},
             {title:"한식뷔페 8,000원",date:new Date(y,m,randInt(7)+21),className:"task--danger",len:1,vlen:2},
         ];
